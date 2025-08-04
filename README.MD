@@ -1,6 +1,9 @@
-EmailEncoder module
-How to use:
-1. Inherit the CMS-based EmailEncoder class
-2. Instantiate this
-3. Use modifyContent() method to encode contained emails
-4. Return modified content to the client
+To use the ContactsEncoder module:
+
+Connect it to your CMS.
+
+Create an instance of the encoder.
+
+Pass your page content into the modifyContent() function.
+
+The result will have all contact details encoded automatically.
