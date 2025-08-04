@@ -1,9 +1,21 @@
 To use the ContactsEncoder module:
 
-Connect it to your CMS.
+// 1. Extend the platform-specific ContactsEncoder class
+require_once 'path/to/ContactsEncoder.php';
 
-Create an instance of the encoder.
+class MyContactsEncoder extends ContactsEncoder {
+    // You can override methods here if needed
+}
 
-Pass your page content into the modifyContent() function.
+// 2. Instantiate the encoder
+$encoder = new MyContactsEncoder();
 
-The result will have all contact details encoded automatically.
+// 3. Prepare the content (HTML, text, etc.)
+$content = '<p>Contact us at info@example.com</p>';
+
+// 4. Encode contact details
+$protectedContent = $encoder->modifyContent($content);
+
+// 5. Output the modified content
+echo $protectedContent;
+
